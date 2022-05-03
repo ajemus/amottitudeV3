@@ -1,0 +1,167 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* général */
+@font-face {
+  font-family: "sligoil";
+  src: url(fonts/Sligoil-Micro.woff) format("woff"),      
+  url(/assets/fonts/Sligoil-Micro.woff2) format("woff2"),
+  url(fonts/Sligoil-Micro.otf) format("opentype");
+
+}
+:root{
+  --mainBlue :#0000CC;
+  --mainOrange:#F28B16;
+  --smallBorder: 1px solid var(--mainBlue);
+  --normalBorder: 2px solid var(--mainBlue);
+}
+html{
+  font-family: "sligoil";
+  font-size: 1rem;
+  color:var(--mainBlue);
+  max-width: 99vw;
+}
+
+
+
+/* header */
+/*  */
+header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--normalBorder);
+}
+nav{
+  display: flex;
+}
+/* reset mise en forme lien */
+header a{ 
+  color: var(--mainBlue);
+  text-decoration: none;
+  font-weight: 400;
+}
+/* parenthèse titre */
+.orangeSlash{
+  color: var(--mainOrange);
+  font-style: normal;
+}
+nav a, #title a{
+  font-size: 2rem;
+  padding: 15px 50px;
+  display: block;
+}
+.link:first-child{
+  border-right: var(--smallBorder);
+}
+.link:last-child{
+  border-left: var(--smallBorder);
+}
+#title{
+  border-right: var(--normalBorder);
+}
+
+
+/* presentationSection */
+/*  */
+#presentationSection{
+  max-width: 99vw;
+}
+.boxPresentation{
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(12, 10vh);
+}
+.boxPresentation:nth-child(2){
+  background-color: var(--mainBlue);
+}
+.texte{
+  line-height:1.5;
+}
+.texte:nth-child(1){
+  text-align: right;
+  grid-row:2 / span 2 ;
+  grid-column: 15 / 19;
+}
+.texte:nth-child(4){
+  text-align: left;
+  grid-row:10 ;
+  grid-column: 11 / 15;
+}
+
+/* ligne savoir faire */
+.boxSavoirFaire{
+  max-width: 99vw;
+  overflow: hidden;
+}
+.boxSavoirFaire:nth-child(2){
+  grid-row: 7 ;
+  grid-column: 1/21;
+}
+.boxSavoirFaire:nth-child(3){
+  grid-row: 8 ;
+  grid-column: 1/21;
+}
+.savoirFaire{
+  inline-size: max-content;
+  font-size: 4rem;
+  transition: transform 1s;
+}
+#savoirFaire1{
+  transform: translateX(-100vw);
+}
+#savoirFaire2{
+  transform: translateX(30vw);
+}
+#savoirFaire1:hover{
+  transform: translateX(10vw);
+}
+#savoirFaire2:hover{
+  transform: translateX(-60vw);
+}
+
+.boxBorder:nth-child(5){
+  grid-row:4 / 6;
+  grid-column: 15 / 18;
+  border-right: var(--smallBorder);
+  border-bottom: var(--smallBorder);
+  margin-top: 30px;
+}
+.boxBorder:nth-child(6){
+  grid-row:6 / 11;
+  grid-column: 6 / 11;
+  border-left: var(--smallBorder);
+  border-bottom: var(--smallBorder);
+  margin-right: 10px;
+}
+.boxBorder:nth-child(7){
+  grid-row:12 / 13;
+  grid-column: 14 ;
+  border-right: var(--smallBorder)
+}
+
+@media screen and (max-width: 1300px) {
+  .texte:nth-child(1){
+    grid-column: 13 / 19;
+  }
+  .texte:nth-child(4){
+    grid-column: 11 / 17;
+  }
+  .boxBorder:nth-child(7){
+    grid-column: 15;
+  }
+}
