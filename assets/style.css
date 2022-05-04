@@ -27,7 +27,9 @@ time, mark, audio, video {
 :root{
   --mainBlue :#0000CC;
   --mainOrange:#F28B16;
-  --smallBorder: 1px solid var(--mainBlue);
+  --mainWhite : #FEFDF0;
+  --smallBlueBorder: 1px solid var(--mainBlue);
+  --smallWhiteBorder: 1px solid var(--mainWhite);
   --normalBorder: 2px solid var(--mainBlue);
 }
 html{
@@ -35,8 +37,11 @@ html{
   font-size: 1rem;
   color:var(--mainBlue);
   max-width: 99vw;
+  background-color:var(--mainWhite) ;
 }
-
+.orange{
+  color: var(--mainOrange);
+}
 
 
 /* header */
@@ -66,10 +71,10 @@ nav a, #title a{
   display: block;
 }
 .link:first-child{
-  border-right: var(--smallBorder);
+  border-right: var(--smallBlueBorder);
 }
 .link:last-child{
-  border-left: var(--smallBorder);
+  border-left: var(--smallBlueBorder);
 }
 #title{
   border-right: var(--normalBorder);
@@ -88,16 +93,18 @@ nav a, #title a{
 }
 .boxPresentation:nth-child(2){
   background-color: var(--mainBlue);
+  color: var(--mainWhite);
 }
+
 .texte{
   line-height:1.5;
 }
-.texte:nth-child(1){
+#texte1{
   text-align: right;
   grid-row:2 / span 2 ;
   grid-column: 15 / 19;
 }
-.texte:nth-child(4){
+#texte2{
   text-align: left;
   grid-row:10 ;
   grid-column: 11 / 15;
@@ -134,25 +141,86 @@ nav a, #title a{
   transform: translateX(-60vw);
 }
 
-.boxBorder:nth-child(5){
+
+/* tout les traits */
+#boxBorder1{
   grid-row:4 / 6;
   grid-column: 15 / 18;
-  border-right: var(--smallBorder);
-  border-bottom: var(--smallBorder);
+  border-right: var(--smallBlueBorder);
+  border-bottom: var(--smallBlueBorder);
   margin-top: 30px;
 }
-.boxBorder:nth-child(6){
+#boxBorder2{
   grid-row:6 / 11;
   grid-column: 6 / 11;
-  border-left: var(--smallBorder);
-  border-bottom: var(--smallBorder);
+  border-left: var(--smallBlueBorder);
+  border-bottom: var(--smallBlueBorder);
   margin-right: 10px;
 }
-.boxBorder:nth-child(7){
+#boxBorder3{
   grid-row:12 / 13;
   grid-column: 14 ;
-  border-right: var(--smallBorder)
+  border-right: var(--smallBlueBorder)
 }
+#boxBorder4{
+  grid-row: 1 / 3;
+  grid-column: 13 / 15;
+  border-right: var(--smallWhiteBorder);
+  border-bottom: var(--smallWhiteBorder);
+}
+#boxBorder5{
+  grid-row: 1 / 12;
+  grid-column: 3 /4;
+  border-left: var(--smallWhiteBorder);
+}
+#boxBorder6{
+  grid-row: 12/13;
+  grid-column: 3/4;
+  border-left: var(--smallBlueBorder);
+  z-index: 2;
+}
+#whiteBg{
+  grid-row: 12;
+  grid-column: 1 / 21;
+  background-color: var(--mainWhite);
+}
+/* texte partie fond bleu */
+#texte3{
+  grid-row: 3 / 6;
+  grid-column: 6 / 13;
+}
+#texte4{
+  grid-row: 6;
+  grid-column: 12/16;
+}
+#customSlash{
+  font-size: 4rem;
+  font-weight: 700;
+  grid-row: 3;
+  grid-column: 5;
+  line-height: 0.9;
+}
+#titre{
+  grid-row: 5;
+  grid-column: 6/9;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+#titre .texte{
+  text-align: right;
+}
+#photoPortrait{
+  grid-row: 6;
+  grid-column: 6/9;
+  max-width: 100%;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 1300px) {
   .texte:nth-child(1){
