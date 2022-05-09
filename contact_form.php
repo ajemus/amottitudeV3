@@ -15,6 +15,6 @@
 	$msg .= "Mail : " . $_POST['mail'] . "\n";
 	$msg .= "Téléphone : " . $_POST['tel'] . "\n";
 	$msg .= "Message : " . $_POST['message'] . "\n ";
-	mail("jules.rbc@gmail.com", "Contact Via site Web", $msg);
+	mail($mail, "Contact Via site Web", $msg);
 	header('Location:index.php#contactSection')
 ?>
