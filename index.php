@@ -47,18 +47,20 @@
 		<article class="boxPresentation">
 			<div  id="whiteBg"></div>
 			<div id="blueBg">
+				<div id="whiteBorder"></div>
 				<div id="texte3Box">
-					<p class="texte" id="texte3">Outre la clarification des besoins, des enjeux et des exigences de l'opération, la consolidation des orientations et faisabilité, l'ajustement des contraintes, la préprogrammation et la programmation fonctionnelle et technique proprement dite, nous pouvons accompagner nos clients dans les phases de choix du concepteur d'études de conception et de chantier.</p>
+					<p class="texte" id="texte3">Outre la clarification des besoins, des enjeux et des exigences de l'opération, la consolidation des orientations et faisabilité, l'ajustement des contraintes, la préprogrammation et la programmation fonctionnelle et technique proprement dite, nous pouvons accompagner nos clients dans les phases de choix du concepteur d'études de conception et de chantier.<span id="borderBox"></span></p>
+					
 				</div>
-				<div id="">
-					<div id="">
+				<div id="boxPresentation2">
+					<div id="boxPhoto">
 						<div id="rang">
 							<p class="texte orange" id="texte5">Dorothée-Lân RABEC</p>
 							<p class="texte" id="texte6">Dirigente-Fondatrice</p>
 						</div>
 					<img src="assets/images/photo_portrait.jpg" id="photoPortrait">
 					</div>
-					<div id="">
+					<div id="boxTextePresentation">
 						<p class="texte" id="texte4">Sa gérante, Dorothée-Lân RABEC,
 						architecte de formation et programmiste généraliste, a plus de 20 ans d'expérience et de nombreuse références en programmation architecturale dans des domaines très divers (équipement universitaires et scolaires, équipements petite enfance, logements, bâtiments médico-sociaux et de recherche, équipements culturels, équipements sportifs, bâtiments tertiaires et industriels,...). Elle a également à son actif de nombreuses réhabilitations de bâtiments, des schémas directeurs, des études d'opportunités, des diagnostics, accessibilités, ...</p>
 					</div>
@@ -69,11 +71,19 @@
 
 		</article>
 	</section>
-	<section id="referencesSection">
-		<h2>références</h2>
+	<section id="referencesSection" class="section">
+		<div class="titre2"><h2>références </h2><div></div></div>
 	</section>
-	<section id="contactSection">
-		<h2>contact</h2>
+	<section id="contactSection" class="section">
+		<div class="titre2"><h2>contact </h2><div></div></div>
+		<form action="contact_form.php" method="post" id="form">
+                <label>nom*<input type="text" class="" id="nom" name="nom"  required></label> 
+                <label>téléphone<input type="text" class="" id="tel" name="tel" ></label> 
+                <label>mail*<input type="text" class="" id="mail" name="mail" required></label> 
+                <label>message*<textarea class="" id="message" name="message" required></textarea></label> 
+                <input type="submit" value="Envoyer">
+            </form>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1239.8756519379028!2d4.85367981379387!3d45.76263915940114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea61d12f15a3%3A0x7b8236328db7e654!2s20a%20Bd%20Eug%C3%A8ne%20Deruelle%2C%2069003%20Lyon!5e0!3m2!1sen!2sfr!4v1652125777724!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</section>
 	<footer>
 

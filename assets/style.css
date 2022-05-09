@@ -207,18 +207,29 @@ nav a, #title a{
   background-color: var(--mainBlue);
   color: white;
 }
+#blueBg{
+  height: 120vh;
+}
 #whiteBg{
   height: 5vh;
   width: 100%;
   background-color: var(--mainWhite);
   position: relative;
 }
-#whiteBg::after{
+#whiteBorder{
   display: block;
   content: "";
-  height: 20vh;
+  height: 120vh;
   position: absolute;
-  right: 17.5vw;
+  left: 5%;
+  border-right: var(--smallWhiteBorder);
+}
+#whiteBorder::after{
+  display: block;
+  content: "";
+  height: 10vh;
+  position: absolute;
+  bottom: -10vh;
   border-right: var(--smallBlueBorder);
 }
 /* 3eme texte avec / custom */
@@ -234,38 +245,98 @@ nav a, #title a{
   line-height: 0.9;
   color: var(--mainOrange);
   position: absolute;
-  left: -5vw;
+  left: -20%;
 }
 #texte3{
   max-width: 30vw;
   position: relative;
 }
-#texte3::after{
+#borderBox{
   display: block;
   content: "";
   height: 20vh;
   width: 15vw;
   position: absolute;
-  left: 32vw;
-  top: -10vh;
+  left: 31vw;
+  top:-10vh;
   border-bottom: var(--smallWhiteBorder);
   border-right: var(--smallWhiteBorder);
+}
+#borderBox::after{
+  display: block;
+  content: "";
+  height: 10vh;
+  position: absolute;
+  right: -1px;
+  top: -10vh;
+  border-right: var(--smallBlueBorder);
 }
 
 
 
+/* box présentation2 */
+#boxPresentation2{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 150px 0;
+}
+#boxPhoto{
+  display: flex;
+  flex-flow: column;
+}
 #rang{
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
+  height: 7vh;
 }
 #rang .texte{
   text-align: right;
 }
 #photoPortrait{
-  max-width: 20vw;
+  max-width: 13vw;
+}
+#boxTextePresentation{
+  width: 30vw;
+  min-width: 25vw;
+  margin-top: 7vh;
+}
+
+
+/* général section */
+/*  */
+.section{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin: 100px 0;
+}
+.titre2{
+  font-size: 2rem;
+  width: 60vw;
+  display: flex;
+}
+.titre2 h2{
+  padding-right: 4px;
+}
+.titre2 div{
+  width: 100%;
+  border-bottom: 4px solid var(--mainBlue);
+  position: relative;
+  bottom: 15px;
 }
 
 
 
+/* section références */
+/*  */
 
+
+
+/* section contact */
+/*  */
+
+/* form */
+textarea{
+  resize: none;
+}
