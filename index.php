@@ -8,11 +8,11 @@
 	<title>Amottitude</title>
 </head>
 <body>
-	<header>
+	<header id="header" class="navSize">
 		<h1 id="title"><a href="index.php">a<em class="orangeSlash">(</em>mo<em class="orangeSlash">)</em>tittude</a></h1>
 		<nav>
 			<a href="reference.php" class="link">références</a>
-			<a href="index.php#contact" class="link">contact</a>
+			<a href="#contactSection" class="link">contact</a>
 		</nav>
 	</header>
 
@@ -86,9 +86,10 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1239.8756519379028!2d4.85367981379387!3d45.76263915940114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea61d12f15a3%3A0x7b8236328db7e654!2s20a%20Bd%20Eug%C3%A8ne%20Deruelle%2C%2069003%20Lyon!5e0!3m2!1sen!2sfr!4v1652125777724!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</section>
 	<footer>
-
+				
 	</footer>
-	<!-- <script src="assets/*.js"></script> -->
+	<script src="assets/js/scroll.js"></script>
+	<script src="assets/js/nav.js"></script>
 
 </body>
 </html>

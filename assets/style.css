@@ -28,9 +28,10 @@ time, mark, audio, video {
   --mainBlue :#0000CC;
   --mainOrange:#F28B16;
   --mainWhite : #FEFDF0;
+  --mainWhiteOpacity : #FEFDF060;
   --smallBlueBorder: 1px solid var(--mainBlue);
   --smallWhiteBorder: 1px solid var(--mainWhite);
-  --normalBorder: 2px solid var(--mainBlue);
+  --normalBorder: 3px solid var(--mainBlue);
 }
 html{
   font-family: "sligoil";
@@ -38,46 +39,67 @@ html{
   color:var(--mainBlue);
   max-width: 99vw;
   background-color:var(--mainWhite) ;
+  scroll-behavior: smooth;
 }
 .orange{
   color: var(--mainOrange);
 }
-
+body{
+  overflow-x: hidden;
+}
 
 /* header */
 /*  */
 header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: var(--normalBorder);
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--mainWhite);
+  transition: height 0.2s;
 }
 nav{
   display: flex;
 }
+
+
 /* reset mise en forme lien */
 header a{ 
   color: var(--mainBlue);
   text-decoration: none;
   font-weight: 400;
+  font-size: 2rem;
+  transition: font-size 0.3s;
 }
-/* parenthèse titre */
+/* mise en forme nav */
 .orangeSlash{
   color: var(--mainOrange);
   font-style: normal;
 }
 nav a, #title a{
-  font-size: 2rem;
   padding: 15px 50px;
   display: block;
 }
 .link:first-child{
-  border-right: var(--smallBlueBorder);
+  border-right: var(--normalBorder);
 }
-.link:last-child{
-  border-left: var(--smallBlueBorder);
-}
+
 #title{
   border-right: var(--normalBorder);
+}
+.navSize{
+  background-color: var(--mainWhiteOpacity);
+  height: 60px;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+header.navSize a{
+  font-size: 1.8rem;
 }
 
 
@@ -146,6 +168,7 @@ nav a, #title a{
 /* gestion des savoir faire */
 #boxSavoirFaire{
   margin: 100px 0;
+  z-index: 2;
 }
 
 /* gestion texte 2 */
@@ -320,8 +343,8 @@ nav a, #title a{
   padding-right: 4px;
 }
 .titre2 div{
-  width: 100%;
-  border-bottom: 4px solid var(--mainBlue);
+  flex-grow: 1;
+  border-bottom: var(--normalBorder);
   position: relative;
   bottom: 15px;
 }
