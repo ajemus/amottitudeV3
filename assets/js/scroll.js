@@ -6,22 +6,19 @@ window.addEventListener('wheel', checkScrollDirection);
 function checkScrollDirection(event) {
 
    	if (checkScrollDirectionIsUp(event)) {
-		console.log("haut")
+		// console.log("haut")
+		remove()
    		if (scrollY==0) {
-            console.log("haut de page")
-			if(containsSize){
-				bigSize();
-			}
-			
+            // console.log("haut de page")
+			bigSize();
    		}
    	} else if (scrollY==0){
          
 		 
   	}else{
-		console.log("bas")
-		if(!containsSize()){
-			smallSize();
-		}
+		// console.log("bas")
+		smallSize();
+		add()
 	  }
 }
 function checkScrollDirectionIsUp(event) {

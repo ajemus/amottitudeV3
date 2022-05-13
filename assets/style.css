@@ -28,7 +28,7 @@ time, mark, audio, video {
   --mainBlue :#0000CC;
   --mainOrange:#F28B16;
   --mainWhite : #FEFDF0;
-  --mainWhiteOpacity : #FEFDF060;
+  --mainWhiteOpacity : #FEFDF080;
   --smallBlueBorder: 1px solid var(--mainBlue);
   --smallWhiteBorder: 1px solid var(--mainWhite);
   --normalBorder: 3px solid var(--mainBlue);
@@ -40,12 +40,16 @@ html{
   max-width: 99vw;
   background-color:var(--mainWhite) ;
   scroll-behavior: smooth;
+  min-height: 78vh;
 }
 .orange{
   color: var(--mainOrange);
 }
 body{
   overflow-x: hidden;
+  padding-top: 100px;
+  position: relative;
+  min-height: 78vh;
 }
 
 /* header */
@@ -55,7 +59,7 @@ header{
   justify-content: space-between;
   align-items: center;
   border-bottom: var(--normalBorder);
-  width: 100vw;
+  width:100vw;
   height: 70px;
   position: fixed;
   top: 0;
@@ -208,12 +212,12 @@ header.navSize a{
   font-size: 4rem;
   transition: transform 1s;
 }
-#savoirFaire1{
+/* #savoirFaire1{
   transform: translateX(-100vw);
-}
-#savoirFaire2{
+} */
+/* #savoirFaire2{
   transform: translateX(30vw);
-}
+} */
 #savoirFaire1:hover{
   transform: translateX(10vw);
 }
@@ -222,7 +226,6 @@ header.navSize a{
 }
 
 
-/* tout les traits */
 
 
 /* texte partie fond bleu */
@@ -363,6 +366,117 @@ header.navSize a{
 textarea{
   resize: none;
 }
+/* boxMap */
+#boxMap{
+  display: flex;
+  max-width: 90vw;
+  margin-top: 100px;
+}
+#texteMap p{
+  text-align: right;
+  margin: 20px 4px;
+  max-width: 150px;
+}
+iframe{
+  width: 70vw;
+  height: 400px;
+}
+
+
+
+
+
+
+
+/* page référence */
+/*  */
+/*  */
+/* barre recherche */
+#blocRecherche{
+  margin: auto;
+  display: flex;
+  inline-size: fit-content;
+  font-size: 1.5rem;
+}
+#recherche{
+  border: 0;
+  border-bottom: var(--normalBorder);
+  min-width: 150px;
+  width: 30vw;
+  margin-left: 15px;
+  font-family:sligoil ;
+  color: var(--mainBlue);
+  font-size: 1.5rem;
+  outline: none;
+}
+#recherche:hover, #recherche:focus{
+  border-bottom: 3px solid var(--mainOrange);
+  color: orange;
+}
+#blocRecherche.orange, #blocRecherche.orange{
+  color: var(--mainOrange);
+}
+
+
+/* box reference */
+#refSection{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 50px 20px;
+  margin: 50px 100px;
+}
+.boxRefSmall{
+  min-width: 200px;
+  max-width: 26vw;
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+  height: 291px;
+}
+.nomRef{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  padding: 50px 10px;
+  transition: opacity 0.4s 0.3s ease-out;
+}
+.imgRef{
+  width: 100%;
+}
+.plus{
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity:0;
+  transition: opacity 0.4s;
+}
+.boxRefSmall:hover .plus{
+  opacity: 1;
+  transition: opacity 0.4s 0.2s ease-out;
+}
+.boxRefSmall:hover .nomRef{
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.boxRefSmall:hover{
+  cursor: pointer;
+}
+.filter{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--mainBlue);
+  opacity: 60%;
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+.boxRefSmall:hover .filter{
+  visibility: visible;
+}
 
 
 
@@ -373,8 +487,14 @@ footer{
   justify-content: space-between;
   padding: 10px;
   border-top: var(--normalBorder);
+  width: 99vw;
+  position: absolute;
+  bottom: -100px;
 }
 footer a{
   text-decoration: none;
-  color: black;
+  color: var(--mainBlue);
+}
+footer a:hover{
+  color: var(--mainOrange);
 }

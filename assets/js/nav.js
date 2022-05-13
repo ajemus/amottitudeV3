@@ -1,5 +1,5 @@
 let header = document.querySelector("#header");
-console.log(header)
+
 testTop();
 
 // test si on est en haut de page
@@ -22,11 +22,17 @@ function containsSize() {
 
 // permet d'enlever la classe pour que le header devienne grand
 function bigSize() {
-	header.classList.remove("navSize")
+	if(containsSize){
+		header.classList.remove("navSize");
+	}
+	
 }
 
 // permet d'ajouter la classe pour que le header devienne petit
 function smallSize() {
-	header.classList.add("navSize")
+	if(!containsSize()){
+		header.classList.add("navSize");
+	}
+	
 }
 
