@@ -60,7 +60,6 @@ header{
   align-items: center;
   border-bottom: var(--normalBorder);
   width:100vw;
-  height: 70px;
   position: fixed;
   top: 0;
   z-index: 10;
@@ -88,11 +87,12 @@ header a{
 nav a, #title a{
   padding: 15px 50px;
   display: block;
+  position: relative;
+  transition: color 0.3s;
 }
 .link:first-child{
   border-right: var(--normalBorder);
 }
-
 #title{
   border-right: var(--normalBorder);
 }
@@ -104,6 +104,27 @@ nav a, #title a{
 }
 header.navSize a{
   font-size: 1.8rem;
+}
+header a::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:var(--mainBlue);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+header a:hover::after{
+  transform: scaleX(1);
+}
+header a:hover{
+  color: white;
 }
 
 
