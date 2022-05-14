@@ -45,11 +45,13 @@
                     }
                     else{
                         echo"             
-                            <div class=\"boxRefSmall\">
-                                <img src=\"/assets/images/img.webp\" alt=\"test\" class=\"imgRef\">
-                                <p class=\"nomRef\">$nom</p>
-                                <p class=\"plus\">voir plus</p>
-                                <div class=\"filter\"></div>
+                            <div class=\"boxRefSmall\" tabindex=\"0\">
+                                <div class=\"test\">
+                                    <img src=\"/assets/images/img.webp\" alt=\"test\" class=\"imgRef\">
+                                    <p class=\"nomRef\">$nom</p>
+                                    <p class=\"plus\">voir plus</p>
+                                    <div class=\"filter\"></div>
+                                </div>
                             </div>    
                         ";
                     }
